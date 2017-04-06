@@ -1,4 +1,23 @@
 #include <stdio.h>
+/*
+eg:
+input  matrix is:
+| 1 2 3 |
+| 4 5 6 |
+| 7 8 9 |
+matrixT(transposition) is:
+| 1 4 7 |
+| 2 5 8 |
+| 3 6 9 |
+matrix diagonal(main is 1) is:
+| 0 0 1 |
+| 0 1 0 |
+| 1 0 0 |
+so rotate 90 is 
+| 1 4 7 |   | 0 0 1 |   | 7 4 1 |
+| 2 5 8 | X | 0 1 0 | = | 8 5 2 |
+| 3 6 9 |   | 1 0 0 |   | 9 6 3 |
+*/
 
 int row = 0;
 int column  = 0; 
@@ -18,7 +37,7 @@ void printfMatrix(int** matrixData)
 int ** initMatrixArray()
 {
     int **matrix = NULL;
-    matrix = new int* [column];
+    matrix = new int* [row];
     for(int i = 0;i < row;i++)
     {
 	    matrix[i] = new int [column];
