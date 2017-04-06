@@ -18,7 +18,7 @@ void printfMatrix(int** matrixData)
 int ** initMatrixArray()
 {
     int **matrix = NULL;
-    matrix = new int* [column];
+    matrix = new int* [row];
     for(int i = 0;i < row;i++)
     {
 	    matrix[i] = new int [column];
